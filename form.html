@@ -38,7 +38,8 @@
           <div class="col">
             <div class="input-field" id="cvv-field">
               <label for="cvv">CVV*</label>
-              <input id="cvv" type="text" required>
+              <input id="cvv" type="number" pattern="([0-9]|[0-9]|[0-9])" min="100" max="9999" required>
+              <!-- <input id="cvv" type="number" pattern="[0-9]{3, 4}" required> -->
             </div>
           </div>
           <div class="col">
