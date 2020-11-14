@@ -38,3 +38,12 @@
 .input-group input:last-child {
   margin-right: 0;
 }
+
+
+input:invalid:required {
+  border: dashed red;
+}
+
+input:valid {
+  border: solid black;
+}
