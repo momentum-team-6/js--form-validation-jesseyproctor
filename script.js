@@ -11,14 +11,27 @@ form.addEventListener('submit', function (event) {
 })
 
 
+
 function totalCost() {
     let numDays = document.querySelector('#days').value
-    let result = eval(numDays * 5)
+    let result = numDays * 5
+    console.log(result)
     const display = document.querySelector('#total')
     display.innerHTML = result
 }
 
 
+//step 5:  5 dollars 5 consecutive days per week.  7 dollars for 2 consecutive days per week.
+//create array giving weekdays a value of 5 and weekends a value of 7
+//use map, date 
+
+//way to distinguish between week days and weekend Date.prototype.getUTCDay()
+// sum of week days multiplied by 5 
+//sum of weekend days multiplied by 7
+//add two sums for total
+//using date and number of days for calculation
+//create an array and use .reduce or .map to run  through each number.
+//since .reduce can provide sum probably use it instead 
 
 function validate() {
     let creditCardNum = document.querySelector('#credit-card').value 
