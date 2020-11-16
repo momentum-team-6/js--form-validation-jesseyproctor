@@ -1,8 +1,8 @@
 console.log('Add validation!');
 
 
-
 const form = document.querySelector('#parking-form')
+
 
 form.addEventListener('submit', function (event) {
     event.preventDefault
@@ -15,7 +15,7 @@ form.addEventListener('submit', function (event) {
 function totalCost() {
     let numDays = document.querySelector('#days').value
     let result = numDays * 5
-    console.log(result)
+    // console.log(result)
     const display = document.querySelector('#total')
     display.innerHTML = result
 }
@@ -26,16 +26,32 @@ function totalCost() {
 //use map, date 
 
 //way to distinguish between week days and weekend Date.prototype.getUTCDay()
-// sum of week days multiplied by 5 
-//sum of weekend days multiplied by 7
-//add two sums for total
+    // const today = new Date()
+    // console.log(today.getDay())
+//days 1-5 recieve value of 5 and 0 and 6 recieve value of 7
+//add array of 5s and 7s
 //using date and number of days for calculation
 //create an array and use .reduce or .map to run  through each number.
-//since .reduce can provide sum probably use it instead 
+//since .reduce can provide sum probably use it instead of for loop or map (map will return array)
+// function reduceNumbers(nums) {
+//     const reduced = nums.reduce(function(acc, currentValue) {
+//       console.log('acc', acc)
+//       console.log('current value:', currentValue)
+//          return acc + currentValue
+//     }, 0)
+//     return reduced
+//   }
+  
+//   const sum = reduceNumbers(numbers)
+  
+//   console.log("sum", sum)
 
 function validate() {
     let creditCardNum = document.querySelector('#credit-card').value 
     validateCardNumber(creditCardNum)
+    // if 
+    // else
+}
 
 function validateCardNumber(number) {
     var regex = new RegExp("^[0-9]{16}$");
@@ -58,3 +74,4 @@ function luhnCheck(val) {
     }
     return (sum % 10) == 0;
 }
+
